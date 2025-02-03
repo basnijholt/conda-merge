@@ -60,7 +60,7 @@ def test_is_valid_pinning(operator: str, version: str) -> None:
         ([">0.0.1", "<2", "=1.0.0"], "=1.0.0"),
         ([">1", "<=3", "<4"], ">1,<=3"),
         ([">1", "<=3"], ">1,<=3"),
-        # TODO #67: !=5 should be removed but this is not yet implemented  # noqa: TD004, FIX002, TD003
+        # TODO #67: !=5 should be removed but this is not yet implemented  # noqa: TD004, FIX002
         # However, this is not a problem here because !=5 is redundant
         # as it is outside the range of >1 and <=3
         ([">1", "<=3", "!=5"], ">1,<=3,!=5"),
